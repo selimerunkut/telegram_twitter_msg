@@ -17,3 +17,4 @@ TWITTER_CONSUMER_SECRET = 'pBHMZzo..............................................
 TWITTER_ACCESS_TOKEN = '53883286-............................................'
 TWITTER_ACCESS_TOKEN_SECRET = 'z5JJ.........................................'
 ```
+Kolay olmasi icin Telegram'da bulundugunuz kanal ve account ID leri icin `/info` bot komutunu kullanabilirsiniz
