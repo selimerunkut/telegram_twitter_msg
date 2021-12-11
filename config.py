@@ -3,8 +3,6 @@
 # =============================================================================
 # Created By  : Sinan Cetinkaya <sinancetinkaya35@gmail.com>
 # =============================================================================
-# don't forget to install certificate for MITMProxy.
-# Instructions: https://docs.mitmproxy.org/stable/concepts-certificates/
 import os
 import platform
 

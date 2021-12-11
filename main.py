@@ -3,8 +3,6 @@
 # =============================================================================
 # Created By  : Sinan Cetinkaya <sinancetinkaya35@gmail.com>
 # =============================================================================
-# Allow other computers to attach to debugpy at this IP address and port.
-# python3 -m debugpy --listen 0.0.0.0:5678 --wait-for-client main.py
 import asyncio
 import os
 from pathlib import Path
