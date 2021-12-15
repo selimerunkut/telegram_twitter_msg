@@ -36,6 +36,16 @@ https://core.telegram.org/bots#3-how-do-i-create-a-bot
 
 invite it to your cahnnel and give it admin permissions
 
+### Create an App for Telegram 
+
+(Most common reason for form submission ERROR while creating a app are some browser addons or a VPN connection/config)
+
+https://my.telegram.org/apps
+
+TELEGRAM_API_HASH = App api_id:
+TELEGRAM_API_ID = App api_hash
+
+
 ### Twitter
 
 create a [twitter developer app](https://developer.twitter.com/)
@@ -47,6 +57,7 @@ Under `User authentication settings` generate a `Access Token and Secret`
 with read/write permissions
 
 TWITTER_CONSUMER_KEY = API KEY
-TWITTER_CONSUMER_SECRET = API KEY SECRET
+
+TWITTER_CONSUMER_SECRET = API SECRET KEY 
 
 
