@@ -5,6 +5,9 @@
 # =============================================================================
 import os
 import platform
+from dotenv import load_dotenv
+
+load_dotenv()
 
 APP_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 PLATFORM = platform.uname().system.lower()
