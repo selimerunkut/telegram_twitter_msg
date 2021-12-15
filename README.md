@@ -1,10 +1,12 @@
-# Selim Erunkut Telegram > Twitter bot
-Bu bot Telegram'da **TELEGRAM_CHANNEL_ID** ile belirtilen kanalda **TELEGRAM_USER_ID** belirtilen kisiden gelen mesajlari Twitter hesabinda paylasir.
+# Telegram Group to Twitter bot
 
-Botun calismasi icin gereken key ve ID leri ya **config.py** dosyasini direk duzenleyerek veya environment degiskenlerini belirterek girebilirsiniz.
+This app will will forward messages from a user **TELEGRAM_USER_ID** posting in a channel  **TELEGRAM_CHANNEL_ID** 
 
-Degisken isimleri asagidaki sekilde girilmelidir.
+**config.py** will read the os environment variables from a .env file
 
+## env example
+
+this examples can also be found in the .env.example file
 ```
 TELEGRAM_USER_ID = 123456789
 TELEGRAM_CHANNEL_ID = 123456789
@@ -17,4 +19,34 @@ TWITTER_CONSUMER_SECRET = 'pBHMZzo..............................................
 TWITTER_ACCESS_TOKEN = '53883286-............................................'
 TWITTER_ACCESS_TOKEN_SECRET = 'z5JJ.........................................'
 ```
-Kolay olmasi icin Telegram'da bulundugunuz kanal ve account ID leri icin `/info` bot komutunu kullanabilirsiniz
+To find out the information about **TELEGRAM_USER_ID** and **TELEGRAM_CHANNEL_ID** 
+the bot command `/info` can be used in the channel were the telegram bot was invited
+
+## deploy on heroku
+
+Procfile file for herokku is already created and the app is ready to deploy
+
+environment varibales need to be created in heroku
+
+## Other requirements 
+
+### Create a Telegram bot
+
+https://core.telegram.org/bots#3-how-do-i-create-a-bot
+
+invite it to your cahnnel and give it admin permissions
+
+### Twitter
+
+create a [twitter developer app](https://developer.twitter.com/)
+
+Under `User authentication settings` generate a `Access Token and Secret`
+
+<img width="697" alt="Screenshot 2021-12-15 at 19 56 03" src="https://user-images.githubusercontent.com/31136147/146239766-8c3ae52d-5157-426f-b319-54b4c1a836e5.png">
+
+with read/write permissions
+
+TWITTER_CONSUMER_KEY = API KEY
+TWITTER_CONSUMER_SECRET = API KEY SECRET
+
+
