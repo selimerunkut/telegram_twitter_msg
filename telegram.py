@@ -9,7 +9,7 @@ import os
 from peony import PeonyClient
 from peony.exceptions import HTTPBadRequest
 from telethon import TelegramClient, events
-from telethon.tl.types import InputPeerUser, InputPeerSelf
+from telethon.tl.types import InputPeerUser, InputPeerSelf, MessageMediaDocument
 import config
 
 log = logging.getLogger(__name__)
@@ -79,19 +79,19 @@ class Telegram:
 
     async def on_message(self, event):
         media_ids = None
-        media_file = None
 
-        try:
-            # If Telegram message contains a media
-            if event.message.media is not None:
+        # If Telegram message contains a media
+        if event.message.media is not None and isinstance(event.message.media, MessageMediaDocument):
+            media_file = None
+            try:
                 media_file = await event.message.download_media()
                 media = await self.twitter.upload_media(media_file)
                 media_ids = [media.media_id]
-        except HTTPBadRequest:
-            log.exception("")
-        finally:
-            if media_file:
-                os.remove(media_file)
+            except HTTPBadRequest:
+                log.exception("")
+            finally:
+                if media_file:
+                    os.remove(media_file)
 
         try:
             await self.twitter.api.statuses.update.post(status=event.message.text, media_ids=media_ids)
