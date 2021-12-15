@@ -26,7 +26,13 @@ the bot command `/info` can be used in the channel were the telegram bot was inv
 
 Procfile file for herokku is already created and the app is ready to deploy
 
-environment varibales need to be created in heroku
+### environment variables need to be created in heroku
+
+`heroku config:set TELEGRAM_USER_ID=123456789`
+
+### **start app** 
+
+`heroku ps:scale worker=1`
 
 ## Other requirements 
 
